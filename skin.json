@@ -10,7 +10,7 @@
 		"MediaWiki": ">= 1.39.0"
 	},
 	"ValidSkinNames": {
-		"nostalgia": {
+		"octipedia": {
 			"class": "SkinTemplate",
 			"args": [
 				{
