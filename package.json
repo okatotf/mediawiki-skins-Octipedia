@@ -1,5 +1,5 @@
 {
-	"name": "Nostalgia",
+	"name": "Octipedia",
 	"private": true,
 	"scripts": {
 		"test": "grunt test"

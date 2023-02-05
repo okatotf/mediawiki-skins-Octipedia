@@ -20,7 +20,7 @@
  * @file
  */
 
-namespace MediaWiki\Skin\Nostalgia;
+namespace MediaWiki\Skin\Octipedia;
 
 use BaseTemplate;
 use Html;
@@ -36,7 +36,7 @@ use XmlSelect;
  * @todo document
  * @ingroup Skins
  */
-class NostalgiaTemplate extends BaseTemplate {
+class OctipediaTemplate extends BaseTemplate {
 
 	/**
 	 * How many search boxes have we made?  Avoid duplicate id's.
@@ -451,14 +451,14 @@ class NostalgiaTemplate extends BaseTemplate {
 		if ( $userHasNewMessages && !$title->equals( $user->getTalkPage() ) ) {
 			$tl = Linker::linkKnown(
 				$user->getTalkPage(),
-				$skin->msg( 'nostalgia-newmessageslink' )->escaped(),
+				$skin->msg( 'octipedia-newmessageslink' )->escaped(),
 				[],
 				[ 'redirect' => 'no' ]
 			);
 
 			$dl = Linker::linkKnown(
 				$user->getTalkPage(),
-				$skin->msg( 'nostalgia-newmessagesdifflink' )->escaped(),
+				$skin->msg( 'octipedia-newmessagesdifflink' )->escaped(),
 				[],
 				[ 'diff' => 'cur' ]
 			);
@@ -528,9 +528,9 @@ class NostalgiaTemplate extends BaseTemplate {
 			$user = $skin->getUser();
 			$permManager = MediaWikiServices::getInstance()->getPermissionManager();
 			if ( $permManager->quickUserCan( 'edit', $user, $title ) && $title->exists() ) {
-				$t = $skin->msg( 'nostalgia-editthispage' )->escaped();
+				$t = $skin->msg( 'octipedia-editthispage' )->escaped();
 			} elseif ( $permManager->quickUserCan( 'create', $user, $title ) && !$title->exists() ) {
-				$t = $skin->msg( 'nostalgia-create-this-page' )->escaped();
+				$t = $skin->msg( 'octipedia-create-this-page' )->escaped();
 			} else {
 				$t = $skin->msg( 'viewsource' )->escaped();
 			}
@@ -556,7 +556,7 @@ class NostalgiaTemplate extends BaseTemplate {
 
 		if ( $title->getArticleID() && ( !$diff ) &&
 			$skin->getUser()->isAllowed( 'delete' ) ) {
-			$t = $skin->msg( 'nostalgia-deletethispage' )->escaped();
+			$t = $skin->msg( 'octipedia-deletethispage' )->escaped();
 
 			$s = Linker::linkKnown(
 				$title,
@@ -585,10 +585,10 @@ class NostalgiaTemplate extends BaseTemplate {
 			$restrictionStore->listApplicableRestrictionTypes( $title )
 		) {
 			if ( $restrictionStore->isProtected( $title ) ) {
-				$text = $skin->msg( 'nostalgia-unprotectthispage' )->escaped();
+				$text = $skin->msg( 'octipedia-unprotectthispage' )->escaped();
 				$query = [ 'action' => 'unprotect' ];
 			} else {
-				$text = $skin->msg( 'nostalgia-protectthispage' )->escaped();
+				$text = $skin->msg( 'octipedia-protectthispage' )->escaped();
 				$query = [ 'action' => 'protect' ];
 			}
 
@@ -747,13 +747,13 @@ class NostalgiaTemplate extends BaseTemplate {
 			$link = $title->getSubjectPage();
 			switch ( $link->getNamespace() ) {
 				case NS_MAIN:
-					$text = $skin->msg( 'nostalgia-articlepage' );
+					$text = $skin->msg( 'octipedia-articlepage' );
 					break;
 				case NS_USER:
-					$text = $skin->msg( 'nostalgia-userpage' );
+					$text = $skin->msg( 'octipedia-userpage' );
 					break;
 				case NS_PROJECT:
-					$text = $skin->msg( 'nostalgia-projectpage' );
+					$text = $skin->msg( 'octipedia-projectpage' );
 					break;
 				case NS_FILE:
 					$text = $skin->msg( 'imagepage' );
@@ -775,11 +775,11 @@ class NostalgiaTemplate extends BaseTemplate {
 					$text = $skin->msg( 'categorypage' );
 					break;
 				default:
-					$text = $skin->msg( 'nostalgia-articlepage' );
+					$text = $skin->msg( 'octipedia-articlepage' );
 			}
 		} else {
 			$link = $title->getTalkPage();
-			$text = $skin->msg( 'nostalgia-talkpage' );
+			$text = $skin->msg( 'octipedia-talkpage' );
 		}
 
 		return Linker::link( $link, $text->escaped(), [], [], $linkOptions );

@@ -1,9 +1,9 @@
 {
-	"name": "Nostalgia",
+	"name": "Octipedia",
 	"author": "...",
-	"url": "https://www.mediawiki.org/wiki/Skin:Nostalgia",
-	"descriptionmsg": "nostalgia-desc",
-	"namemsg": "skinname-nostalgia",
+	"url": "https://octaria.wiki.gd/",
+	"descriptionmsg": "A skin for Octipedia",
+	"namemsg": "skinname-octipedia",
 	"license-name": "GPL-2.0-or-later",
 	"type": "skin",
 	"requires": {
@@ -15,9 +15,9 @@
 			"args": [
 				{
 					"name": "nostalgia",
-					"template": "MediaWiki\\Skin\\Nostalgia\\NostalgiaTemplate",
+					"template": "MediaWiki\\Skin\\Octipedia\\OctipediaTemplate",
 					"styles": [
-						"ext.nostalgia"
+						"ext.octipedia"
 					],
 					"bodyOnly": true
 				}
@@ -25,24 +25,24 @@
 		}
 	},
 	"MessagesDirs": {
-		"Nostalgia": [
+		"Octipedia": [
 			"i18n"
 		]
 	},
 	"ResourceModules": {
-		"ext.nostalgia": {
+		"ext.octipedia": {
 			"class": "ResourceLoaderSkinModule",
 			"styles": {
-				"0": "style.css",
+				"0": "style.css"
 			}
 		}
 	},
 	"ResourceFileModulePaths": {
 		"localBasePath": "modules",
-		"remoteSkinPath": "Nostalgia/modules"
+		"remoteSkinPath": "Octipedia/modules"
 	},
 	"AutoloadNamespaces": {
-		"MediaWiki\\Skin\\Nostalgia\\": "includes/"
+		"MediaWiki\\Skin\\Octipedia\\": "includes/"
 	},
 	"manifest_version": 2
 }
